@@ -1,0 +1,32 @@
+h1{
+    background-color: black;
+    text-align:left;
+    color: antiquewhite;
+    font-size : 50px;
+    width:500pt;
+    height:100pt;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.b2{
+    background-color: gray;
+    color: black;
+    padding: 0.5em;
+    margin: 0.5em;
+    border-color: black;
+}
+
+.b3 {
+    background-color:red;
+    color: black;
+    padding: 0.5em;
+    margin: 0.5em;
+    border-color: black;
+}
+
+.b4 {
+    background-color:green;
+    color: black;
+    border : 3px solid;
+    border-color: black;
+}

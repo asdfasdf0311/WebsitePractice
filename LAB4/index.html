@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Index</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <style type = "text/css">
+            
+        </style>
+        
+    </head>
+    <body onload = start();>
+        <div class="divall">
+            <p class="p-head"></p> <!--width는 1020px로-->
+            <header>
+                <text class="title">&nbsp Welcome to internet shop!!</text>
+            </header>
+            <p class="p-head"></p>
+            <nav class="flexible-container">
+                <div class="flex-item"><a href='login.html'>로그인</a></div>
+                <div class="flex-item2"><a href='signup.html'>회원가입</a></div>
+                <div class="flex-item3"><u>메인페이지</u></div>
+      
+        <section>
+            <br>
+            <section id="category" class="left">
+                <br><label>Choose a category:</label><br>
+                <select class = "select1" name="list" onchange=changeContent(value)>
+                    <option value="all">All</option>
+                    <option value="macbook">Macbook</option>
+                    <option value="ipad">iPad</option>
+                    <option value="iphone">iPhone</option>
+                    <option value="applewatch">Applewatch</option>
+                </select>
+                <br><label>Enter search term:</label><br>
+                <input class = "select1" type="text" name="search" id="search" placeholder ="e.g. macbook" onchange=changeContent(value)>
+                <br><label>Choose a sort:</label><br>
+                <select class = "select1" name="price" id="price" onchange=changeContent(value)>
+                    <option value="all">none</option>
+                    <!--<option value="uptodown">up to down</option>
+                    <option value="downtoup">down to up</option>-->
+                </select>
+
+            </section>
+            <section id="content" class="right"></section>
+        </section>
+
+        <script>
+            let arrContent = [];
+
+            function start(){
+                fetch("product.json")
+                    .then((response) => response.json())
+                    .then((data) => {
+                        for(var i=0; i<data.length; i++){
+                            var obj = {"name": data[i].name, "price": data[i].price, "type": data[i].type, "img": data[i].img}
+                            arrContent.push(obj);
+                        }
+                        changeContent("all")
+                    }) 
+            }
+
+            function changeContent(value) {
+                document.getElementById("content").innerHTML = "";
+                for(var i = 0; i<arrContent.length; i++){
+                    if(compare(value, arrContent[i].type) || compare(value, arrContent[i].name) || compare(value, "all")) {
+                        var name = arrContent[i].name;
+                        var output = "<div class=\"box\"><img src=\"" + arrContent[i].img + "\"><button type=\"button\" class=\"button\"" + 
+                        "onclick= showText(" + i + ")>Click to see more</button><h4 id = \"" +
+                        name + "\">" + "</h4></div>"
+                        document.getElementById("content").innerHTML += output;   
+                    }
+                }
+            }
+
+            function compare(val1, val2) {
+                str1 = val1.toLowerCase();
+                str2 = val2.toLowerCase();
+                return str2.includes(str1);
+            }
+
+            function showText(num) {
+                document.getElementById(arrContent[num].name).innerHTML = arrContent[num].name + "<br>" + "가격: " + arrContent[num].price + "원";
+            }
+            window.onscroll = () =>{
+                if(window.scrollY + window.innerHeight >= document.body.offsetHeight){
+                    changeContent("all");
+                }
+            };
+            
+
+        </script>
+
+    </body>
+</html>
+    

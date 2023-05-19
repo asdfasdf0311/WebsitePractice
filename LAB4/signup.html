@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>signup</title>
+        <link rel = "stylesheet" type = "text/css" href = "main.css">
+    </head>
+    <body>
+        <div class="divall">    
+            <p class="p-head"></p>
+            <header>
+                <a href="index.html"><text class="title2">&nbsp Welcome to internet shop!!</text></a>
+            </header>
+            <p class="p-head"></p>
+            <nav class="flexible-container">
+                <div class="flex-item"><a href='login.html'>로그인</a></div>
+                <div class="flex-item2"><u>회원가입</u></div>
+                <div class="flex-item3"><a href='index.html'>메인페이지</a></div>   
+            </nav>
+            <div class="signupdiv">
+                <form method="get" action="">
+                <h6>
+                    저희 사이트를 어떻게 알게 되셨나요?<br>
+                    <label>
+                        <input name = "howto" type = "radio" value = "유튜브광고"checked>유튜브광고
+                    </label>
+                    <label>
+                        <input name = "howto" type = "radio" value = "네이버검색"checked>네이버검색
+                    </label>
+                    <label>
+                        <input name = "howto" type = "radio" value = "지인추천"checked>지인추천
+                    </label>
+                    <label>
+                        <input name = "howto" type = "radio" value = "그 외"checked>그 외
+                    </label>
+                </h6>
+                <h6>
+                    저희 사이트에서 주로 거래하고 싶은 품목이 있으신가요?<br>
+                    (다중선택가능)<br>
+                    <label>
+                        <input name = "object" type = "checkbox" value = "의류">의류
+                    </label>
+                    <label>
+                        <input name = "object" type = "checkbox" value = "책">책
+                    </label>
+                    <label>
+                        <input name = "object" type = "checkbox" value = "음식">음식
+                    </label>
+                    <label>
+                        <input name = "object" type = "checkbox" value = "전자기기">전자기기
+                    </label>
+                </h6>
+                    <P>이름<br><input name = "name" type="text" size=37 autofocus required></P>
+                    <p>생일 : <input name = "birth" type = "date">&nbsp&nbsp
+                        학년 : <input name = "grade" type = "number" min="1" max="4" step="1" value="2"></p>
+                    <p>전화번호<br><input name = "tel" type = "tel" size=37 placeholder = "(###) ###-####" pattern="\(\d{3}\) \d{3}-\d{4}" re
+                        quired></p>
+                    <p>E-mail<br><input name = "email" type = "email" size=37 placeholder = "name@domain.com" required></p>
+                    <p>아이디<br><input name = "id" type = "text" size=37 required></p>
+                    <p>비밀번호<br><input name = "password" type = "text" size=37 autocomplete="off" required></p>
+                    <p>비밀번호재확인<br><input name = "password2" type = "text" size=37 autocomplete="off" required></p>
+                    <p><input type = "submit" value = "가입하기" class = "b2">
+                        <input type = "reset" value = "초기화" class = "b3"></p>
+                </form>
+            </div>
+
+        </div>
+    </body>
+</html>

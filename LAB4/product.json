@@ -1,0 +1,50 @@
+[
+    {
+        "name": "macbookpro",
+        "price": 1790000,
+        "type": "macbook",
+        "img": "macbookpro.png"
+    },
+    {
+        "name": "macbookair",
+        "price": 1390000,
+        "type": "macbook",
+        "img": "macbookair.png"
+    },
+    {
+        "name": "ipadair",
+        "price": 929000,
+        "type": "ipad",
+        "img": "ipadair.png"
+    },
+    {
+        "name": "ipad10",
+        "price": 679000,
+        "type": "ipad",
+        "img": "ipad10.png"
+    },
+    {
+        "name": "iphonepro",
+        "price": 1550000,
+        "type": "iphone",
+        "img": "iphonepro.png"
+    },
+    {
+        "name": "iphone14",
+        "price": 1250000,
+        "type": "iphone",
+        "img": "iphone.png"
+    },
+    {
+        "name": "applewatch8",
+        "price": 599000,
+        "type": "applewatch",
+        "img": "applewatch8.png"
+    },
+    {
+        "name": "applewatchSE",
+        "price": 359000,
+        "type": "applewatch",
+        "img": "applewatchSE.png"
+    }
+]

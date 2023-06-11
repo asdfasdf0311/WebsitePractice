@@ -1,0 +1,188 @@
+label, select, input{
+    width: 95%;
+}
+
+.left{/*왼쪽 카테고리열*/
+    border:1px solid black;
+    width: 25%;
+    height: 550px;
+    padding-left: 5px;
+    float: left;
+    background-color: rgba(208, 208, 201, 0.686);
+}
+
+.right{/*오른쪽 상품 나오는 곳*/
+    box-sizing: border-box;
+    width: 70%;
+    height: 550px;
+    border: 1px solid black;
+    overflow: auto;  
+    background-color: rgba(208, 208, 201, 0.686);
+    float: right;
+}
+
+.divall{/*전체감싸는*/
+    max-width:1020px;
+    width:100%;
+    margin:0 auto;
+}
+.logindiv{/*로그인창*/
+    max-width:1020px;
+    width:300px;
+    display:flex;
+    justify-content: center;
+    margin:0 auto;
+    border : 1px solid rgb(92, 92, 92);
+    border-radius: 5px;
+}
+.signupdiv{/*회원가입*/
+    width:300px;
+    /*border : 1px solid rgb(92, 92, 92);*/
+    margin:0 auto;
+    border-radius: 5px;
+}
+
+.p-head{/*title 선*/
+    background: rgb(167, 165, 165);
+    width:100%;
+    max-width:1020px;
+    height:10px;
+}
+
+
+
+/*title animation*/
+@keyframes slide{
+    from {
+        left:1020px;
+      }
+    to {
+        left:0px;
+      }
+}
+
+text{position:relative; animation-name:slide; animation-duration: 2s;}
+.title{font-size:30px; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+.title2{font-size:30px;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation:none;display:flex;justify-content: center;}
+
+h3{/*소제목*/
+    color:black;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:16px;
+    padding-bottom: 0;
+}
+
+/*button custom*/
+.b2{/*가입하기 버튼*/
+    background-color:gray;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    border : 1px solid;
+    border-color: rgb(92, 92, 92);
+    border-radius: 7px;
+    width:210px;
+    height: 40px;
+}
+
+.b3 {/*초기화버튼*/
+    font-size: 17px;
+    border : 1px solid;
+    border-color: rgb(92, 92, 92);
+    border-radius: 7px;
+    width:70px;
+    height: 40px;
+}
+
+.b4 {/*로그인버튼*/
+    background-color:gray;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    border : 1px solid;
+    border-color: rgb(92, 92, 92);
+    border-radius: 7px;
+    width:250px;
+    height: 40px;
+}
+
+.b_main {
+    background-color:white;
+    color: black;
+    border : 3px solid;
+    border-color: white;
+    font-style: bold;
+}
+
+
+
+a{text-decoration: none;color: black;}
+
+nav div:hover{
+    background-color: rgb(167, 165, 165);
+    font-weight:bold;
+}
+/*네비게이션 아이템들*/
+.flex-item{width : 80px;text-align:center;margin-top:2.5px;margin-bottom:2.5px;}
+.flex-item2{width : 90px;text-align:center;margin-top:2.5px;margin-bottom:2.5px;}
+.flex-item3{width : 100px;text-align:center;margin-top:2.5px;margin-bottom:2.5px;}
+
+img {/*상품이미지*/
+    padding: 5px;
+    width: 100%;
+    height: auto;         
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0px;
+}
+
+
+
+/*네비게이션(로그인/메인페이지/회원가입)*/
+.flexible-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center ;
+    flex-direction: row;
+}
+
+
+button {/*click to see more*/
+    font-size: 17px;
+    border : 1px solid;
+    border-color: rgba(208, 208, 201, 0.686);
+    border-radius: 7px;
+    width:150px;
+    height: 40px;
+}
+
+
+.box{/*각각 상품*/
+    float: left;
+    width: 48%;
+    box-sizing: border-box;
+    /*border: 1px solid black;*/
+    margin: 1%;
+    padding: 2px;
+}
+
+.box p{
+    float:right;
+}
+
+
+
+h4{/*제품클릭하면 설명란*/
+    font-size: smaller;
+    margin: 0%;
+    float: right;
+}
